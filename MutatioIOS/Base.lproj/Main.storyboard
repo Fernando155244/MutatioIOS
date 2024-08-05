@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controler-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MutatioIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginControler" customModule="MutatioIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
         <!--Confirmacion-->
         <scene sceneID="xHi-pC-pur">
             <objects>
-                <viewController id="G9s-IV-vzU" userLabel="Confirmacion" sceneMemberID="viewController">
+                <viewController id="G9s-IV-vzU" userLabel="Confirmacion" customClass="ConfirmacionControler" customModule="MutatioIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sl6-XE-1W8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +185,7 @@
         <!--Inicio-->
         <scene sceneID="Gld-Pr-bnU">
             <objects>
-                <viewController id="7sH-xX-Xfh" userLabel="Inicio" sceneMemberID="viewController">
+                <viewController id="7sH-xX-Xfh" userLabel="Inicio" customClass="InicioControler" customModule="MutatioIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NjH-UJ-l0Y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,7 +303,7 @@
         <!--Preguntas-->
         <scene sceneID="24r-yc-UsF">
             <objects>
-                <viewController id="V9T-OG-25H" userLabel="Preguntas" sceneMemberID="viewController">
+                <viewController id="V9T-OG-25H" userLabel="Preguntas" customClass="PreguntasCOntroler" customModule="MutatioIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="keu-PN-025">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -346,7 +346,7 @@
         <!--Graficas-->
         <scene sceneID="pu4-RG-17a">
             <objects>
-                <viewController id="vdo-u7-3bI" userLabel="Graficas" sceneMemberID="viewController">
+                <viewController id="vdo-u7-3bI" userLabel="Graficas" customClass="PreguntaControler" customModule="MutatioIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A4Y-aE-gEe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,7 +379,7 @@
         <!--Pregunta-->
         <scene sceneID="wsY-H2-Z0z">
             <objects>
-                <viewController id="rYZ-cd-EBM" userLabel="Pregunta" sceneMemberID="viewController">
+                <viewController id="rYZ-cd-EBM" userLabel="Pregunta" customClass="GraficasControler" customModule="MutatioIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eWc-6K-X7d">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

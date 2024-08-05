@@ -1,0 +1,63 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<DataSet xmlns="http://tempuri.org/">
+<xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="NewDataSet">
+<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+<xs:complexType>
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+<xs:element name="Table">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="id" type="xs:unsignedInt" minOccurs="0"/>
+<xs:element name="paterno" type="xs:string" minOccurs="0"/>
+<xs:element name="materno" type="xs:string" minOccurs="0"/>
+<xs:element name="nombres" type="xs:string" minOccurs="0"/>
+<xs:element name="Actual" type="xs:string" minOccurs="0"/>
+<xs:element name="Opcion" type="xs:string" minOccurs="0"/>
+<xs:element name="nivel" type="xs:string" minOccurs="0"/>
+<xs:element name="rfc" type="xs:string" minOccurs="0"/>
+<xs:element name="f_registro" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitud_real" type="xs:string" minOccurs="0"/>
+<xs:element name="cancelada" type="xs:string" minOccurs="0"/>
+<xs:element name="observaciones_cancelacion" type="xs:string" minOccurs="0"/>
+<xs:element name="validada_dgp" type="xs:string" minOccurs="0"/>
+<xs:element name="f_validacion_dgp" type="xs:string" minOccurs="0"/>
+<xs:element name="observaciones_dgp" type="xs:string" minOccurs="0"/>
+<xs:element name="certificada_ur" type="xs:string" minOccurs="0"/>
+<xs:element name="f_certificacion_ur" type="xs:string" minOccurs="0"/>
+<xs:element name="observacion_ur" type="xs:string" minOccurs="0"/>
+<xs:element name="marcada" type="xs:string" minOccurs="0"/>
+<xs:element name="obsevaciones" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:choice>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+<NewDataSet xmlns="">
+<Table diffgr:id="Table1" msdata:rowOrder="0">
+<id>1</id>
+<paterno>Franecki</paterno>
+<materno>Klein</materno>
+<nombres>Katrina</nombres>
+<Actual>MICHOACAN</Actual>
+<Opcion>MICHOACAN</Opcion>
+<nivel>PRIMARIA</nivel>
+<rfc>chqEhKFAHcpof</rfc>
+<f_registro>2000-01-19 15:31:12</f_registro>
+<solicitud_real>1946</solicitud_real>
+<cancelada>1</cancelada>
+<observaciones_cancelacion>Nisi excepturi quod dolores.</observaciones_cancelacion>
+<validada_dgp>1</validada_dgp>
+<f_validacion_dgp>1985-09-07 00:56:36</f_validacion_dgp>
+<observaciones_dgp>Vitae exercitationem labore sunt maxime et ex deleniti doloribus. Molestiae enim fugiat illo officiis repellendus quo debitis. Alias voluptatem quas odit vero reiciendis nulla velit. Deleniti eum mollitia sint harum fugit minima nisi. Minus ea laudantium voluptates accusamus iste. Quisquam ut odio eius. Repellendus alias quasi velit nihil ab nulla quidem esse. Temporibus in sapiente ullam facere voluptatibus laborum atque vero vitae. Laborum repudiandae quod. Omnis ut laborum labore odio quisquam. Quam mollitia nemo. Sint suscipit minima. Sit possimus explicabo voluptates. Non corporis nobis aliquam. Qui ipsa soluta.</observaciones_dgp>
+<certificada_ur>0</certificada_ur>
+<f_certificacion_ur>1958-07-23 09:47:41</f_certificacion_ur>
+<observacion_ur>Nobis error magnam id totam assumenda voluptatem similique id possimus.</observacion_ur>
+<marcada>1</marcada>
+<obsevaciones>Vacio</obsevaciones>
+</Table>
+</NewDataSet>
+</diffgr:diffgram>
+</DataSet>

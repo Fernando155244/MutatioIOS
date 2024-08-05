@@ -1,0 +1,149 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<DataSet xmlns="http://tempuri.org/">
+<xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="NewDataSet">
+<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+<xs:complexType>
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+<xs:element name="Table">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="estado_actual" type="xs:unsignedInt" minOccurs="0"/>
+<xs:element name="Cant" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:choice>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+<NewDataSet xmlns="">
+<Table diffgr:id="Table1" msdata:rowOrder="0">
+<nombre>AGUASCALIENTES</nombre>
+<estado_actual>1</estado_actual>
+<Cant>9</Cant>
+</Table>
+<Table diffgr:id="Table2" msdata:rowOrder="1">
+<nombre>BAJA CALIFORNIA</nombre>
+<estado_actual>2</estado_actual>
+<Cant>10</Cant>
+</Table>
+<Table diffgr:id="Table3" msdata:rowOrder="2">
+<nombre>BAJA CALIFORNIA SUR</nombre>
+<estado_actual>3</estado_actual>
+<Cant>12</Cant>
+</Table>
+<Table diffgr:id="Table4" msdata:rowOrder="3">
+<nombre>CAMPECHE</nombre>
+<estado_actual>4</estado_actual>
+<Cant>9</Cant>
+</Table>
+<Table diffgr:id="Table5" msdata:rowOrder="4">
+<nombre>COAHUILA</nombre>
+<estado_actual>5</estado_actual>
+<Cant>14</Cant>
+</Table>
+<Table diffgr:id="Table6" msdata:rowOrder="5">
+<nombre>COLIMA</nombre>
+<estado_actual>6</estado_actual>
+<Cant>8</Cant>
+</Table>
+<Table diffgr:id="Table7" msdata:rowOrder="6">
+<nombre>CHIAPAS</nombre>
+<estado_actual>7</estado_actual>
+<Cant>7</Cant>
+</Table>
+<Table diffgr:id="Table8" msdata:rowOrder="7">
+<nombre>CHIHUAHUA</nombre>
+<estado_actual>8</estado_actual>
+<Cant>15</Cant>
+</Table>
+<Table diffgr:id="Table9" msdata:rowOrder="8">
+<nombre>CIUDAD DE MEXICO</nombre>
+<estado_actual>9</estado_actual>
+<Cant>14</Cant>
+</Table>
+<Table diffgr:id="Table10" msdata:rowOrder="9">
+<nombre>DURANGO</nombre>
+<estado_actual>10</estado_actual>
+<Cant>14</Cant>
+</Table>
+<Table diffgr:id="Table11" msdata:rowOrder="10">
+<nombre>GUANAJUATO</nombre>
+<estado_actual>11</estado_actual>
+<Cant>10</Cant>
+</Table>
+<Table diffgr:id="Table12" msdata:rowOrder="11">
+<nombre>GUERRERO</nombre>
+<estado_actual>12</estado_actual>
+<Cant>9</Cant>
+</Table>
+<Table diffgr:id="Table13" msdata:rowOrder="12">
+<nombre>HIDALGO</nombre>
+<estado_actual>13</estado_actual>
+<Cant>10</Cant>
+</Table>
+<Table diffgr:id="Table14" msdata:rowOrder="13">
+<nombre>JALISCO</nombre>
+<estado_actual>14</estado_actual>
+<Cant>16</Cant>
+</Table>
+<Table diffgr:id="Table15" msdata:rowOrder="14">
+<nombre>VALLE DE TOLUCA</nombre>
+<estado_actual>15</estado_actual>
+<Cant>10</Cant>
+</Table>
+<Table diffgr:id="Table16" msdata:rowOrder="15">
+<nombre>MICHOACAN</nombre>
+<estado_actual>16</estado_actual>
+<Cant>11</Cant>
+</Table>
+<Table diffgr:id="Table17" msdata:rowOrder="16">
+<nombre>MORELOS</nombre>
+<estado_actual>17</estado_actual>
+<Cant>8</Cant>
+</Table>
+<Table diffgr:id="Table18" msdata:rowOrder="17">
+<nombre>NAYARIT</nombre>
+<estado_actual>18</estado_actual>
+<Cant>13</Cant>
+</Table>
+<Table diffgr:id="Table19" msdata:rowOrder="18">
+<nombre>NUEVO LEON</nombre>
+<estado_actual>19</estado_actual>
+<Cant>14</Cant>
+</Table>
+<Table diffgr:id="Table20" msdata:rowOrder="19">
+<nombre>OAXACA</nombre>
+<estado_actual>20</estado_actual>
+<Cant>12</Cant>
+</Table>
+<Table diffgr:id="Table21" msdata:rowOrder="20">
+<nombre>PUEBLA</nombre>
+<estado_actual>21</estado_actual>
+<Cant>10</Cant>
+</Table>
+<Table diffgr:id="Table22" msdata:rowOrder="21">
+<nombre>QUERETARO</nombre>
+<estado_actual>22</estado_actual>
+<Cant>10</Cant>
+</Table>
+<Table diffgr:id="Table23" msdata:rowOrder="22">
+<nombre>QUINTANA ROO</nombre>
+<estado_actual>23</estado_actual>
+<Cant>8</Cant>
+</Table>
+<Table diffgr:id="Table24" msdata:rowOrder="23">
+<nombre>SAN LUIS POTOSI</nombre>
+<estado_actual>24</estado_actual>
+<Cant>8</Cant>
+</Table>
+<Table diffgr:id="Table25" msdata:rowOrder="24">
+<nombre>SINALOA</nombre>
+<estado_actual>25</estado_actual>
+<Cant>9</Cant>
+</Table>
+</NewDataSet>
+</diffgr:diffgram>
+</DataSet>
