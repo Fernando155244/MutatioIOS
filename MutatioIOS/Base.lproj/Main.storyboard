@@ -35,11 +35,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmY-rI-PHQ">
-                                <rect key="frame" x="159" y="707" width="75" height="35"/>
+                                <rect key="frame" x="153" y="707" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Ingresar"/>
                                 <connections>
+                                    <action selector="ingresar_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3E9-pF-th4"/>
                                     <segue destination="G9s-IV-vzU" kind="show" id="6a6-3q-xpv"/>
                                 </connections>
                             </button>
@@ -66,6 +67,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="Folio" destination="ybx-Ck-iwX" id="NcC-y9-4Gq"/>
+                        <outlet property="IngresarBTN" destination="mmY-rI-PHQ" id="JK7-O5-4GO"/>
+                        <outlet property="RFC" destination="1GL-zh-PKN" id="3b3-gy-tbC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,7 +175,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Consulta de Estatus"/>
                                 <connections>
-                                    <segue destination="7sH-xX-Xfh" kind="modal" modalPresentationStyle="fullScreen" id="5BF-oy-xcr"/>
+                                    <segue destination="7sH-xX-Xfh" kind="modal" modalPresentationStyle="fullScreen" id="5f3-UC-Y8f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -191,28 +197,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Solicitud de   Numero:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSj-I8-pCe">
-                                <rect key="frame" x="16" y="106" width="168" height="21"/>
+                                <rect key="frame" x="16" y="106" width="361" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Del trabajador:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsw-mq-PmT">
-                                <rect key="frame" x="16" y="135" width="113" height="21"/>
+                                <rect key="frame" x="16" y="135" width="361" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Solicitud Registrada el: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSz-ER-A8W">
-                                <rect key="frame" x="10" y="164" width="179" height="21"/>
+                                <rect key="frame" x="10" y="164" width="367" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Certificada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W4-NM-15K">
-                                <rect key="frame" x="10" y="214" width="86" height="21"/>
+                                <rect key="frame" x="10" y="214" width="367" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -270,14 +276,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirmada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA6-8n-DEm">
-                                <rect key="frame" x="16" y="280" width="89" height="21"/>
+                                <rect key="frame" x="16" y="280" width="361" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Validada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpl-Xi-17G">
-                                <rect key="frame" x="12" y="322" width="65" height="21"/>
+                                <rect key="frame" x="12" y="322" width="365" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -295,6 +301,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="rlV-gP-e0N"/>
+                    <connections>
+                        <outlet property="IngresarBTN" destination="6Ca-c1-b9J" id="j1Z-t5-cFP"/>
+                        <outlet property="imgDatos" destination="S5b-Q7-9zz" id="Pb7-rp-QaG"/>
+                        <outlet property="txtCertificada" destination="1W4-NM-15K" id="Dsv-jB-fG7"/>
+                        <outlet property="txtConfirmada" destination="WA6-8n-DEm" id="Cz4-sx-in5"/>
+                        <outlet property="txtEstatus" destination="QJN-hN-IMz" id="f9l-Ae-vYu"/>
+                        <outlet property="txtID" destination="bSj-I8-pCe" id="HqC-vV-h7M"/>
+                        <outlet property="txtLeyenda" destination="qns-3L-gA5" id="iET-LS-Ntq"/>
+                        <outlet property="txtNombre" destination="Xsw-mq-PmT" id="2Ov-5v-iK1"/>
+                        <outlet property="txtObservaciones" destination="A1b-Lh-1Q1" id="2z9-Hs-hAg"/>
+                        <outlet property="txtRegistrada" destination="kSz-ER-A8W" id="fOw-Ck-LOk"/>
+                        <outlet property="txtTitulo" destination="hWg-Ua-TIL" id="zrk-en-d37"/>
+                        <outlet property="txtValidada" destination="Xpl-Xi-17G" id="Wd2-hU-em9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxy-qb-9Cd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
