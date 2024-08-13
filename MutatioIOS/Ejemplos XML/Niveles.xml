@@ -1,0 +1,71 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<DataSet xmlns="http://tempuri.org/">
+<xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="NewDataSet">
+<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+<xs:complexType>
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+<xs:element name="Table">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="nivel" type="xs:string" minOccurs="0"/>
+<xs:element name="Cant" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:choice>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+<NewDataSet xmlns="">
+<Table diffgr:id="Table1" msdata:rowOrder="0">
+<nivel>PREESCOLAR</nivel>
+<Cant>15</Cant>
+</Table>
+<Table diffgr:id="Table2" msdata:rowOrder="1">
+<nivel>PRIMARIA</nivel>
+<Cant>23</Cant>
+</Table>
+<Table diffgr:id="Table3" msdata:rowOrder="2">
+<nivel>PREESCOLAR INDIGENA</nivel>
+<Cant>18</Cant>
+</Table>
+<Table diffgr:id="Table4" msdata:rowOrder="3">
+<nivel>PRIMARIA INDIGENA</nivel>
+<Cant>20</Cant>
+</Table>
+<Table diffgr:id="Table5" msdata:rowOrder="4">
+<nivel>ESPECIAL</nivel>
+<Cant>29</Cant>
+</Table>
+<Table diffgr:id="Table6" msdata:rowOrder="5">
+<nivel>SECUNDARIAS GENERALES</nivel>
+<Cant>23</Cant>
+</Table>
+<Table diffgr:id="Table7" msdata:rowOrder="6">
+<nivel>SECUNDARIAS TECNICAS</nivel>
+<Cant>23</Cant>
+</Table>
+<Table diffgr:id="Table8" msdata:rowOrder="7">
+<nivel>TELESECUNDARIA</nivel>
+<Cant>21</Cant>
+</Table>
+<Table diffgr:id="Table9" msdata:rowOrder="8">
+<nivel>EDUCACION FISICA</nivel>
+<Cant>27</Cant>
+</Table>
+<Table diffgr:id="Table10" msdata:rowOrder="9">
+<nivel>APOYO Y ASISTENCIA A LA EDUCACION</nivel>
+<Cant>17</Cant>
+</Table>
+<Table diffgr:id="Table11" msdata:rowOrder="10">
+<nivel>E.N.A.M. DOCENTE</nivel>
+<Cant>23</Cant>
+</Table>
+<Table diffgr:id="Table12" msdata:rowOrder="11">
+<nivel>E.N.A.M. PAAE</nivel>
+<Cant>20</Cant>
+</Table>
+</NewDataSet>
+</diffgr:diffgram>
+</DataSet>

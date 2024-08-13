@@ -183,6 +183,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="hAL-lD-00y"/>
+                    <connections>
+                        <outlet property="IngresarBTN" destination="y6t-JL-2qp" id="HwP-10-Rta"/>
+                        <outlet property="txtActual" destination="y2I-9O-CNx" id="uii-Q3-cyy"/>
+                        <outlet property="txtNivel" destination="BFD-0y-dr2" id="mUp-2k-zYU"/>
+                        <outlet property="txtNombre" destination="zbk-gW-BPB" id="tsZ-TB-fc5"/>
+                        <outlet property="txtOpcion1" destination="mbh-Cp-uz3" id="1Fi-s2-RUc"/>
+                        <outlet property="txtOpcion2" destination="98b-o0-kIj" id="GBY-eo-8ae"/>
+                        <outlet property="txtSolicitud" destination="A25-QQ-gMM" id="Han-kY-vxc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAp-kc-TMz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

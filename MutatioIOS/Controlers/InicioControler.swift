@@ -112,6 +112,13 @@ class InicioControler: UIViewController,XMLParserDelegate
                 if(Inicio[0].Certificada_UR == 1)
                 {
                     txtCertificada.text = "🔘La solicitud ha sido Certificada \(Inicio[0].F_Certificada_UR)"
+                    if (Inicio[0].Marcada == 0)
+                    {
+                        return 0
+                    }else if (Inicio[0].Marcada == 1)
+                    {
+                        return 1
+                    }
                 }else
                 {
                     txtCertificada.isHidden = false
@@ -127,13 +134,6 @@ class InicioControler: UIViewController,XMLParserDelegate
                 {
                     return 2
                 }
-                else if (Inicio[0].Marcada == 0)
-                {
-                    return 0
-                }else if (Inicio[0].Marcada == 1)
-                {
-                    return 1
-                }
                 else
                 {
                     return 10
@@ -147,6 +147,13 @@ class InicioControler: UIViewController,XMLParserDelegate
                 if(Inicio[0].Certificada_UR == 1)
                 {
                     txtCertificada.text = "🔘La solicitud ha sido Certificada \(Inicio[0].F_Certificada_UR)"
+                    if (Inicio[0].Marcada == 0)
+                    {
+                        return 0
+                    }else if (Inicio[0].Marcada == 1)
+                    {
+                        return 1
+                    }
                 }
                 if (Inicio[0].Validada_DGP == 1)
                 {
@@ -155,13 +162,6 @@ class InicioControler: UIViewController,XMLParserDelegate
                 if(Inicio[0].Cancelada == 1)
                 {
                     return 2
-                }
-                else if (Inicio[0].Marcada == 0)
-                {
-                    return 0
-                }else if (Inicio[0].Marcada == 1)
-                {
-                    return 1
                 }
                 else
                 {

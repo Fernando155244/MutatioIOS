@@ -1,0 +1,61 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<DataSet xmlns="http://tempuri.org/">
+<xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="NewDataSet">
+<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+<xs:complexType>
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+<xs:element name="Table">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+<xs:element name="paterno" type="xs:string" minOccurs="0"/>
+<xs:element name="materno" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="Actual" type="xs:string" minOccurs="0"/>
+<xs:element name="Opcion1" type="xs:string" minOccurs="0"/>
+<xs:element name="Opcion2" type="xs:string" minOccurs="0"/>
+<xs:element name="nivel" type="xs:string" minOccurs="0"/>
+<xs:element name="rfc" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo_solicitud" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitud_real" type="xs:string" minOccurs="0"/>
+<xs:element name="f_registro" type="xs:string" minOccurs="0"/>
+<xs:element name="cancelada" type="xs:string" minOccurs="0"/>
+<xs:element name="observaciones_cancelacion" type="xs:string" minOccurs="0"/>
+<xs:element name="validada_dgp" type="xs:string" minOccurs="0"/>
+<xs:element name="certificada_ur" type="xs:string" minOccurs="0"/>
+<xs:element name="f_cetificada_ur" type="xs:string" minOccurs="0"/>
+<xs:element name="obsevaciones" type="xs:string" minOccurs="0"/>
+<xs:element name="marcada" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:choice>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+<NewDataSet xmlns="">
+<Table diffgr:id="Table1" msdata:rowOrder="0">
+<id>1</id>
+<paterno>Heidenreich</paterno>
+<materno>Effertz</materno>
+<nombre>Cielo</nombre>
+<Actual>PUEBLA</Actual>
+<Opcion1>QUERETARO</Opcion1>
+<Opcion2>CHIHUAHUA</Opcion2>
+<nivel>E.N.A.M. PAAE</nivel>
+<rfc>DF3TELeCEOmFF</rfc>
+<tipo_solicitud>2</tipo_solicitud>
+<solicitud_real>1</solicitud_real>
+<f_registro>1991-08-01 12:48:10</f_registro>
+<cancelada>0</cancelada>
+<observaciones_cancelacion>Praesentium ullam animi delectus debitis. Consectetur hic accusantium ducimus doloremque accusamus porro aliquid iure dicta. Delectus natus tempore ullam dolorem. Voluptate in mollitia mollitia consequatur nam eligendi ipsa. Tenetur quasi dicta eum consequuntur accusantium dolorem. Maxime provident necessitatibus inventore dolorem doloremque reiciendis eaque in est.</observaciones_cancelacion>
+<validada_dgp>1</validada_dgp>
+<certificada_ur>1</certificada_ur>
+<f_cetificada_ur>Vacio</f_cetificada_ur>
+<obsevaciones>Vacio</obsevaciones>
+<marcada>0</marcada>
+</Table>
+</NewDataSet>
+</diffgr:diffgram>
+</DataSet>
