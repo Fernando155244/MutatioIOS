@@ -7,13 +7,35 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class LoginControler: UIViewController, UITextFieldDelegate
 {
+    var pickerData: [String] = [String]()
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    // The data to return fopr the row and component (column) that's being passed in
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int)-> String? {
+            return pickerData[row]
+        }
+    
+        
     @IBOutlet weak var IngresarBTN :UIButton!
     @IBOutlet weak var RFC:UITextField!
     @IBOutlet weak var Folio: UITextField!
+    @IBOutlet weak var Opcion: UIPickerView!
+    
+    var pickerview = UIPickerView()
         override func viewDidLoad() {
+            func numberOfComponents(in pickerView: UIPickerView) -> Int {
+                    return 1
+                }
+                  
+                func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+                    return pickerData.count
+                }
         super.viewDidLoad()
             var UsuarioFicticio = "FernandoOrozco"
             var passwordFicticio = "123"
@@ -29,8 +51,10 @@ class LoginControler: UIViewController, UITextFieldDelegate
             guardarDatosMemoria(key: "Edad", value: "26")
             guardarDatosMemoria(key: "Telefono", value: "5548835143")
             guardarDatosMemoria(key: "Ocupacion", value: "Estudiante")
+            
+          
+            pickerData = ["Cambio", "Permuta"]
         }
-        
         
         func login(name:String, pass:String)-> Bool
         {
@@ -102,7 +126,7 @@ class LoginControler: UIViewController, UITextFieldDelegate
             {
                 var usuario = RFC.text
                 var password = Folio.text
-                print(usuario)
+                print(usuario as Any)
             }else
             {
                 
@@ -118,5 +142,13 @@ class LoginControler: UIViewController, UITextFieldDelegate
             userDefaults.set(value, forKey: key)
             userDefaults.synchronize()
         }
+    
+
     }
 
+extension ViewController : UIPickerViewDelegate{
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerView[row]
+    }
+}
