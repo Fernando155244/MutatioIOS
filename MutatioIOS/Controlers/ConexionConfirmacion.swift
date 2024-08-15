@@ -13,12 +13,11 @@ class ConexionRevision: NSObject, XMLParserDelegate
     var foundCharacters = ""
     var Revisado:[Revision]=[]
     var currentInicio : String = ""
-    
-    var Id:Int = Int()
+
     var Paterno: String = ""
     var Materno: String = ""
     var Nombre: String = ""
-    var actual : String = ""
+    var Actual : String = ""
     var Opcion1 :String = ""
     var Opcion2:String = ""
     var Nivel: String = ""
@@ -30,11 +29,10 @@ class ConexionRevision: NSObject, XMLParserDelegate
         currentInicio = elementName
             if elementName == ""
             {
-                Id = Int()
                 Paterno = ""
                 Materno = ""
                 Nombre = ""
-                actual = ""
+                Actual = ""
                 Opcion1  = ""
                 Opcion2 = ""
                 Nivel = ""
@@ -48,24 +46,21 @@ class ConexionRevision: NSObject, XMLParserDelegate
         // Método que se llama al encontrar caracteres dentro de un elemento
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         switch currentInicio {
-        case "Id":
-            if let idValue = Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) {
-                Id = idValue
-                print(idValue)
-            }
-        case "Paterno":
+        case "paterno":
             Paterno += string.trimmingCharacters(in: .whitespacesAndNewlines)
-        case "Materno":
+        case "materno":
             Materno += string.trimmingCharacters(in: .whitespacesAndNewlines)
-        case "Nombre":
+        case "nombre":
             Nombre += string.trimmingCharacters(in: .whitespacesAndNewlines)
+        case "Actual":
+            Actual += string.trimmingCharacters(in: .whitespacesAndNewlines)
         case "Opcion1":
             Opcion1 += string.trimmingCharacters(in: .whitespacesAndNewlines)
         case "Opcion2":
             Opcion2 += string.trimmingCharacters(in: .whitespacesAndNewlines)
-        case "Nivel":
-            Nivel = string.trimmingCharacters(in: .whitespacesAndNewlines)
-        case "RFC":
+        case "nivel":
+            Nivel += string.trimmingCharacters(in: .whitespacesAndNewlines)
+        case "rfc":
             RFC = string.trimmingCharacters(in: .whitespacesAndNewlines)
        
         default:

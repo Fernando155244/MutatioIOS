@@ -19,6 +19,7 @@ class ConfirmacionControler: UIViewController
     @IBOutlet weak var txtNivel:UILabel!
     var Revision: [Revision] = []
     var Tipo: Int = Int()
+    var Id : Int = 1
         override func viewDidLoad() {
         super.viewDidLoad()
         parseXML()
@@ -34,14 +35,14 @@ class ConfirmacionControler: UIViewController
                 self.Revision = ConexionRevision().Revisado
                 if(Tipo == 0)
                 {
-                    txtSolicitud.text! = " Solicitud de Cambio con Id: \(delegate.Id)"
+                    txtSolicitud.text! = " Solicitud de Cambio con Id: \(Id)"
                 }else if (Tipo == 1)
                 {
-                    txtSolicitud.text! = " Solicitud de Permuta con Id: \(delegate.Id)"
+                    txtSolicitud.text! = " Solicitud de Permuta con Id: \(Id)"
                 }
-                txtSolicitud.text! = ""
-                txtNombre.text! = "Del trabajador: \(delegate.Paterno) \(delegate.Materno) \(delegate.Nombre)"
-                txtActual.text! = "\(delegate.actual)"
+                txtSolicitud.text! = "Solicitud de Cambios Con ID \(Id)"
+                txtNombre.text! = "De solicitante: \(delegate.Paterno) \(delegate.Materno) \(delegate.Nombre)"
+                txtActual.text! = "\(delegate.Actual)"
                 txtOpcion1.text! = "\(delegate.Opcion1)"
                 txtOpcion2.text! = "\(delegate.Opcion2)"
                 txtNivel.text! = "\(delegate.Nivel)"

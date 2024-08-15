@@ -36,26 +36,6 @@ class Conexion: NSObject, XMLParserDelegate
     var Marcada:Int = Int()
     
     let dateFormatter = ISO8601DateFormatter()
-    /*var parsedData: [String: String] =
-    ["Id":"String",
-     "Paterno": "String",
-     "Materno": "String",
-     "Nombre": "String",
-     "Opcion1" :"String",
-     "Opcion2":"String",
-     "Nivel": "String",
-     "RFC":"String",
-     "Tipo_Solicitud": "Int",
-     "Solicitud_Real": "Int",
-     "F_Registro":"Date",
-     "Cancelada": "Int",
-     "Observaciones_Cancelacion":"String",
-     "Validada_DGP": "Int",
-     "Certificada_UR" : "Int",
-     "F_Certificada_UR" : "Date",
-     " Observaciones " :"String",
-     "Marcada":"Int"
-    ]*/
     // Método que se llama al encontrar el comienzo de un elemento
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         currentInicio = elementName
@@ -86,61 +66,10 @@ class Conexion: NSObject, XMLParserDelegate
             foundCharacters = ""
         }
 
-        // Método que se llama al encontrar caracteres dentro de un elemento
-        /*func parser(_ parser: XMLParser, foundCharacters string: String) {
-            switch currentInicio{
-            case "Id":
-                Id += Int()
-            case "Paterno":
-                Paterno += string
-            case "Materno":
-                Materno += string
-            case "actual":
-                actual
-            case "Nombre":
-                Nombre += string
-            case "Opcion1":
-                Opcion1 += string
-            case  "Opcion2":
-                Opcion2 += string
-            case "Nivel":
-                Nivel = string
-            case "RFC":
-                RFC = string
-            case "Tipo_solicitud":
-                Tipo_Solicitud = Int()
-            case "Solicitud_Real":
-                Solicitud_Real = Int()
-            case "f_registro":
-                let dia:String = string
-                F_Registro = dateFormatter.date(from: dia)!
-            case "cancelada":
-                Cancelada = Int()
-            case "observaciones_cancelacion":
-                Observaciones_Cancelacion += string
-            case "validada_dgp":
-                Validada_DGP = Int()
-            case "certificada_ur":
-                Certificada_UR = Int()
-            case "f_certificada_ur":
-                let dia: String = string
-                F_Certificada_UR = dateFormatter.date(from: dia)!
-            case "observaciones":
-                Observaciones += string
-            case "marcada":
-                Marcada = Int()
-            default:
-                break
-            }
-            print(currentInicio)
-        }*/
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         switch currentInicio {
         case "Id":
-            if let idValue = Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) {
-                Id = idValue
-                print(idValue)
-            }
+            Id += Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) ?? 10
         case "Paterno":
             Paterno += string.trimmingCharacters(in: .whitespacesAndNewlines)
         case "Materno":
@@ -154,39 +83,27 @@ class Conexion: NSObject, XMLParserDelegate
         case "Nivel":
             Nivel = string.trimmingCharacters(in: .whitespacesAndNewlines)
         case "RFC":
-            RFC = string.trimmingCharacters(in: .whitespacesAndNewlines)
+            RFC += string.trimmingCharacters(in: .whitespacesAndNewlines)
         case "Tipo_solicitud":
-            if let tipoSolicitudValue = Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) {
-                Tipo_Solicitud = tipoSolicitudValue
-            }
+            Tipo_Solicitud += Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) ?? 10
         case "Solicitud_Real":
-            if let solicitudRealValue = Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) {
-                Solicitud_Real = solicitudRealValue
-            }
+                Solicitud_Real += Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) ?? 10
         case "f_registro":
             F_Registro = dateFormatter.date(from: string.trimmingCharacters(in: .whitespacesAndNewlines)) ?? Date()
         case "cancelada":
-            if let canceladaValue = Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) {
-                Cancelada = canceladaValue
-            }
+                Cancelada += Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) ?? 10
         case "observaciones_cancelacion":
             Observaciones_Cancelacion += string.trimmingCharacters(in: .whitespacesAndNewlines)
         case "validada_dgp":
-            if let validadaDGPValue = Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) {
-                Validada_DGP = validadaDGPValue
-            }
+                Validada_DGP += Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) ?? 10
         case "certificada_ur":
-            if let certificadaURValue = Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) {
-                Certificada_UR = certificadaURValue
-            }
+                Certificada_UR += Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) ?? 10
         case "f_certificada_ur":
             F_Certificada_UR = dateFormatter.date(from: string.trimmingCharacters(in: .whitespacesAndNewlines)) ?? Date()
         case "observaciones":
             Observaciones += string.trimmingCharacters(in: .whitespacesAndNewlines)
         case "marcada":
-            if let marcadaValue = Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) {
-                Marcada = marcadaValue
-            }
+                Marcada += Int(string.trimmingCharacters(in: .whitespacesAndNewlines)) ?? 10
         default:
             break
         }

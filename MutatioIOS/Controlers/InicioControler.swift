@@ -24,98 +24,112 @@ class InicioControler: UIViewController,XMLParserDelegate
     @IBOutlet weak var imgDatos: UIImageView!
     var Inicio: [Inicio] = []
     var Tipo: Int = Int()
-    
+    var Resultado : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         parseXML()
-        let Resultado: Int = Registro()
-        if(Tipo == 0)
-        {
-            if (Resultado == 2)
-            {
-                txtEstatus.text = "🔘Su Solicitud de Cambio Fue Cancelada\nFecha de cancelación:"
-                imgDatos.image = UIImage(named: "Neutro")
-                txtTitulo.text = "La solicitud fue cancelada"
-                txtLeyenda.isHidden = false
-                txtObservaciones.text = "Observaciones \(Inicio[0].Observaciones_Cancelacion)"
-            }else if (Resultado == 0 )
-            {
-                txtEstatus.text = "🔘Su Solicitud de Cambio Fue Denegada"
-                imgDatos.image = UIImage(named: "Negativo")
-                txtTitulo.text = "Lastima"
-                txtLeyenda.text = "Su solicitud de cambio no ha podido ser aceptada \(Inicio[0].Observaciones)"
-            }else if (Resultado == 1 )
-            {
-                txtEstatus.text = "🔘Su Solicitud de Cambio Fue Aceptada"
-                imgDatos.image = UIImage(named: "Positivo")
-                txtTitulo.text = "Felicidades!"
-                txtLeyenda.text = "Su solicitud de cambio fue exitosa \(Inicio[0].Observaciones)"
-            }}
-        else if(Tipo == 1)
-        {
-            if (Resultado == 2)
-            {
-                txtEstatus.text = "🔘Su Solicitud de Permuta Fue Cancelada\nFecha de cancelación:"
-                imgDatos.image = UIImage(named: "Neutro")
-                txtTitulo.text = "La solicitud fue cancelada"
-                txtLeyenda.isHidden = false
-                txtObservaciones.text = "Observaciones \(Inicio[0].Observaciones_Cancelacion)"
-            }else if (Resultado == 0 )
-            {
-                txtEstatus.text = "🔘Su Solicitud de Permuta Fue Denegada"
-                imgDatos.image = UIImage(named: "Negativo")
-                txtTitulo.text = "Lastima"
-                txtLeyenda.text = "Su solicitud de Permuta no ha podido ser aceptada \(Inicio[0].Observaciones)"
-            }else if (Resultado == 1 )
-            {
-                txtEstatus.text = "🔘Su Solicitud de Permuta Fue Aceptada"
-                imgDatos.image = UIImage(named: "Positivo")
-                txtTitulo.text = "Felicidades!"
-                txtLeyenda.text = "Su solicitud de Permuta fue exitosa \(Inicio[0].Observaciones)"
-            }
-        }
-        else{
-            print("Error Detectado")
-        }
-    
-    func parseXML() {
-        if let path = Bundle.main.url(forResource: "Inicio", withExtension: "xml") {
-            if let parser = XMLParser(contentsOf: path) {
-                var delegate = Conexion()
-                parser.delegate = delegate
-                parser.parse()
-                
-                // Una vez finalizado el parsing, asignamos los datos y recargamos la tabla
-                self.Inicio = Conexion().Iniciado
-                txtID.text! = "Solicitud de Cambio Numero: \(delegate.Id)"
-                txtNombre.text! += "\(delegate.Paterno) \(delegate.Materno) \(delegate.Nombre)"
-            } else {
-                print("Error: No se pudo crear el parser")
-            }
-        } else {
-            print("Error: No se pudo encontrar el archivo XML")
-        }
     }
-
-    func Registro ()-> Int
+    
+        func parseXML() {
+            
+            if let path = Bundle.main.url(forResource: "Inicio", withExtension: "xml") {
+                func parseXML() {
+                    if let path = Bundle.main.url(forResource: "Inicio", withExtension: "xml") {
+                        if let parser = XMLParser(contentsOf: path) {
+                            let delegate = Conexion() // Usa una sola instancia de Conexion
+                            parser.delegate = delegate
+                            parser.parse()
+                            // Una vez finalizado el parsing, asignamos los datos y recargamos la tabla
+                            self.Inicio = delegate.Iniciado // Usa la misma instancia para obtener los datos
+                            Resultado = Registro(Solicitud_Real: delegate.Solicitud_Real, F_Registro:delegate.F_Registro, Certificada_UR: delegate.Certificada_UR, F_Certificada_UR: delegate.F_Certificada_UR, Marcada: delegate.Marcada, Cancelada: delegate.Cancelada, Validada_DGP: String(delegate.Validada_DGP), Observaciones: delegate.Observaciones)
+                            if(Tipo == 0)
+                            {
+                                txtID.text = " Solicitud de Cambio con Id: \(delegate.Id)"
+                            }else if (Tipo == 1)
+                            {
+                                txtID.text = " Solicitud de Permuta con Id: \(delegate.Id)"
+                            }
+                            txtNombre.text = "De solicitante: \(delegate.Paterno) \(delegate.Materno) \(delegate.Nombre)"
+                            
+                            if(Tipo == 0)
+                            {
+                                if (Resultado == 2)
+                                {
+                                    txtEstatus.text = "🔘Su Solicitud de Cambio Fue Cancelada\nFecha de cancelación:"
+                                    imgDatos.image = UIImage(named: "Neutro")
+                                    txtTitulo.text = "La solicitud fue cancelada"
+                                    txtLeyenda.isHidden = false
+                                    txtObservaciones.text = "Observaciones \(delegate.Observaciones_Cancelacion)"
+                                }else if (Resultado == 0 )
+                                {
+                                    txtEstatus.text = "🔘Su Solicitud de Cambio Fue Denegada"
+                                    imgDatos.image = UIImage(named: "Negativo")
+                                    txtTitulo.text = "Lastima"
+                                    txtLeyenda.text = "Su solicitud de cambio no ha podido ser aceptada \(delegate.Observaciones)"
+                                }else if (Resultado == 1 )
+                                {
+                                    txtEstatus.text = "🔘Su Solicitud de Cambio Fue Aceptada"
+                                    imgDatos.image = UIImage(named: "Positivo")
+                                    txtTitulo.text = "Felicidades!"
+                                    txtLeyenda.text = "Su solicitud de cambio fue exitosa \(delegate.Observaciones)"
+                                }}
+                            else if(Tipo == 1)
+                            {
+                                if (Resultado == 2)
+                                {
+                                    txtEstatus.text = "🔘Su Solicitud de Permuta Fue Cancelada\nFecha de cancelación:"
+                                    imgDatos.image = UIImage(named: "Neutro")
+                                    txtTitulo.text = "La solicitud fue cancelada"
+                                    txtLeyenda.isHidden = false
+                                    txtObservaciones.text = "Observaciones \(delegate.Observaciones_Cancelacion)"
+                                }else if (Resultado == 0 )
+                                {
+                                    txtEstatus.text = "🔘Su Solicitud de Permuta Fue Denegada"
+                                    imgDatos.image = UIImage(named: "Negativo")
+                                    txtTitulo.text = "Lastima"
+                                    txtLeyenda.text = "Su solicitud de Permuta no ha podido ser aceptada \(delegate.Observaciones)"
+                                }else if (Resultado == 1 )
+                                {
+                                    txtEstatus.text = "🔘Su Solicitud de Permuta Fue Aceptada"
+                                    imgDatos.image = UIImage(named: "Positivo")
+                                    txtTitulo.text = "Felicidades!"
+                                    txtLeyenda.text = "Su solicitud de Permuta fue exitosa \(delegate.Observaciones)"
+                                }
+                            }
+                            else{
+                                print("Error Detectado")
+                            }
+                        } else {
+                            print("Error: No se pudo crear el parser")
+                        }
+                    } else {
+                        print("Error: No se pudo encontrar el archivo XML")
+                    }
+                }
+            }
+        
+        func Registro (Solicitud_Real: Int, F_Registro: Date, Certificada_UR: Int, F_Certificada_UR: Date, Marcada:Int,Cancelada: Int,Validada_DGP: String, Observaciones: String)-> Int
         {
             
             if(Tipo == 0)
             {
-                if(Inicio[0].Solicitud_Real == 1)
+                if(Solicitud_Real == 1)
                 {
-                    txtRegistrada.text = "🔘La solicitud ha sido Verificada \(Inicio[0].F_Registro)"
+                    txtRegistrada.text = "🔘La solicitud ha sido Verificada \(F_Registro)"
                 }else
                 {
                     txtRegistrada.isHidden = false
                 }
-                if(Inicio[0].Certificada_UR == 1)
+                if(Certificada_UR == 1)
                 {
-                    txtCertificada.text = "🔘La solicitud ha sido Certificada \(Inicio[0].F_Certificada_UR)"
-                    if (Inicio[0].Marcada == 0)
+                    txtCertificada.text = "🔘La solicitud ha sido Certificada \(F_Certificada_UR)"
+                    if(Cancelada == 1)
+                    {
+                        return 2
+                    }else if (Marcada == 0)
                     {
                         return 0
-                    }else if (Inicio[0].Marcada == 1)
+                    }else if (Marcada == 1)
                     {
                         return 1
                     }
@@ -123,14 +137,14 @@ class InicioControler: UIViewController,XMLParserDelegate
                 {
                     txtCertificada.isHidden = false
                 }
-                if (Inicio[0].Validada_DGP == 1)
+                if (Validada_DGP != "00/00/0000")
                 {
-                    txtValidada.text = "🔘La solicitud ha sido Validada el \(Inicio[0].Validada_DGP)\n\(Inicio[0].Observaciones)"
+                    txtValidada.text = "🔘La solicitud ha sido Validada el \(Validada_DGP)\n\(Observaciones)"
                 }else
                 {
                     txtValidada.isHidden = false
                 }
-                if(Inicio[0].Cancelada == 1)
+                if(Cancelada == 1)
                 {
                     return 2
                 }
@@ -140,26 +154,26 @@ class InicioControler: UIViewController,XMLParserDelegate
                 }
             }else if (Tipo == 1)
             {
-                if(Inicio[0].Solicitud_Real == 1)
+                if(Solicitud_Real == 1)
                 {
-                    txtRegistrada.text = "🔘La solicitud ha sido Verificada \(Inicio[0].F_Registro)"
+                    txtRegistrada.text = "🔘La solicitud ha sido Verificada \(F_Registro)"
                 }
-                if(Inicio[0].Certificada_UR == 1)
+                if(Certificada_UR == 1)
                 {
-                    txtCertificada.text = "🔘La solicitud ha sido Certificada \(Inicio[0].F_Certificada_UR)"
-                    if (Inicio[0].Marcada == 0)
+                    txtCertificada.text = "🔘La solicitud ha sido Certificada \(F_Certificada_UR)"
+                    if (Marcada == 0)
                     {
                         return 0
-                    }else if (Inicio[0].Marcada == 1)
+                    }else if (Marcada == 1)
                     {
                         return 1
                     }
                 }
-                if (Inicio[0].Validada_DGP == 1)
+                if (Validada_DGP != "00/00/0000")
                 {
-                    txtValidada.text = "🔘La solicitud ha sido Validada el \(Inicio[0].Validada_DGP)\n\(Inicio[0].Observaciones)"
+                    txtValidada.text = "🔘La solicitud ha sido Validada el \(Validada_DGP)\n\(Observaciones)"
                 }
-                if(Inicio[0].Cancelada == 1)
+                if(Cancelada == 1)
                 {
                     return 2
                 }
