@@ -75,7 +75,11 @@ class LoginControler: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             let password = Folio.text
             print(usuario as Any)
         }
+        ConfirmacionControler().Id = Int(Folio.text ?? "0")!
+        //printContent("Posicion \(Opcion.numberOfComponents)")
+        //InicioControler().Tipo = Opcion.numberOfComponents
         self.view.endEditing(true)
+        
     }
     
     func guardarDatosMemoria(key: String, value: Any) {

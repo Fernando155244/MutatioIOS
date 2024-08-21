@@ -69,14 +69,6 @@ class ConexionRevision: NSObject, XMLParserDelegate
         print(currentInicio)
     }
 
-
-        // Método que se llama al encontrar el final de un elemento
-        /*func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-            if currentInicio == elementName {
-               // parsedData[elementName] = foundCharacters.trimmingCharacters(in: .whitespacesAndNewlines)
-            }
-        }*/
-
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
             if elementName == "Revision" {
                 let Revision = MutatioIOS.Revision(Paterno: currentInicio.trimmingCharacters(in: .whitespacesAndNewlines),Materno:  currentInicio.trimmingCharacters(in: .whitespacesAndNewlines),Nombre:currentInicio.trimmingCharacters(in: .whitespacesAndNewlines), Actual:currentInicio.trimmingCharacters(in: .whitespacesAndNewlines), Opcion1:  currentInicio.trimmingCharacters(in: .whitespacesAndNewlines),Opcion2: currentInicio.trimmingCharacters(in: .whitespacesAndNewlines),Nivel: currentInicio.trimmingCharacters(in: .whitespacesAndNewlines),RFC: currentInicio.trimmingCharacters(in: .whitespacesAndNewlines))

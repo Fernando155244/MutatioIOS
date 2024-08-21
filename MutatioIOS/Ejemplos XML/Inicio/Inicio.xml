@@ -1,4 +1,3 @@
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
 <DataSet xmlns="http://tempuri.org/">
 <xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="NewDataSet">
 <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
@@ -52,7 +51,7 @@ This XML file does not appear to have any style information associated with it. 
 <observaciones_cancelacion>Praesentium ullam animi delectus debitis. Consectetur hic accusantium ducimus doloremque accusamus porro aliquid iure dicta. Delectus natus tempore ullam dolorem. Voluptate in mollitia mollitia consequatur nam eligendi ipsa. Tenetur quasi dicta eum consequuntur accusantium dolorem. Maxime provident necessitatibus inventore dolorem doloremque reiciendis eaque in est.</observaciones_cancelacion>
 <validada_dgp>1</validada_dgp>
 <certificada_ur>1</certificada_ur>
-<f_cetificada_ur>Vacio</f_cetificada_ur>
+<f_cetificada_ur>1991-08-01 12:48:10</f_cetificada_ur>
 <obsevaciones>Vacio</obsevaciones>
 <marcada>1</marcada>
 </Table>

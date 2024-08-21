@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1006EDE32C6C0F5D00DCF99F /* Inicio.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1006EDD52C6C0F5D00DCF99F /* Inicio.xml */; };
 		1006EDE92C6C0F5D00DCF99F /* Revision.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1006EDDD2C6C0F5D00DCF99F /* Revision.xml */; };
 		1006EDEB2C6C0F5D00DCF99F /* Estados.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1006EDE02C6C0F5D00DCF99F /* Estados.xml */; };
 		1006EDEC2C6C0F5D00DCF99F /* Niveles.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1006EDE12C6C0F5D00DCF99F /* Niveles.xml */; };
@@ -32,6 +31,7 @@
 		10A2A6BD2C66DA2A00105806 /* Confirmacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A2A6BC2C66DA2A00105806 /* Confirmacion.swift */; };
 		10A2A6BF2C66DD3300105806 /* Mensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A2A6BE2C66DD3300105806 /* Mensaje.swift */; };
 		10BF80592C656773003EA09F /* Inicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BF80582C656773003EA09F /* Inicio.swift */; };
+		10D4E2A32C753BE1008F8765 /* Inicio.xml in Resources */ = {isa = PBXBuildFile; fileRef = 10D4E2A22C753BE1008F8765 /* Inicio.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1006EDD52C6C0F5D00DCF99F /* Inicio.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Inicio.xml; sourceTree = "<group>"; };
 		1006EDDD2C6C0F5D00DCF99F /* Revision.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Revision.xml; sourceTree = "<group>"; };
 		1006EDE02C6C0F5D00DCF99F /* Estados.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Estados.xml; sourceTree = "<group>"; };
 		1006EDE12C6C0F5D00DCF99F /* Niveles.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Niveles.xml; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		10A2A6BC2C66DA2A00105806 /* Confirmacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Confirmacion.swift; sourceTree = "<group>"; };
 		10A2A6BE2C66DD3300105806 /* Mensaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensaje.swift; sourceTree = "<group>"; };
 		10BF80582C656773003EA09F /* Inicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inicio.swift; sourceTree = "<group>"; };
+		10D4E2A22C753BE1008F8765 /* Inicio.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Inicio.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		1006EDD82C6C0F5D00DCF99F /* Inicio */ = {
 			isa = PBXGroup;
 			children = (
-				1006EDD52C6C0F5D00DCF99F /* Inicio.xml */,
+				10D4E2A22C753BE1008F8765 /* Inicio.xml */,
 			);
 			path = Inicio;
 			sourceTree = "<group>";
@@ -314,8 +314,8 @@
 				1006EDE92C6C0F5D00DCF99F /* Revision.xml in Resources */,
 				104D38172C406FD90011E85C /* Assets.xcassets in Resources */,
 				1006EDEC2C6C0F5D00DCF99F /* Niveles.xml in Resources */,
-				1006EDE32C6C0F5D00DCF99F /* Inicio.xml in Resources */,
 				104D381A2C406FD90011E85C /* Base in Resources */,
+				10D4E2A32C753BE1008F8765 /* Inicio.xml in Resources */,
 				1006EDEB2C6C0F5D00DCF99F /* Estados.xml in Resources */,
 				104D38152C406FD80011E85C /* Base in Resources */,
 			);
