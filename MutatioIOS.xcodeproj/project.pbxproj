@@ -32,6 +32,9 @@
 		10A2A6BF2C66DD3300105806 /* Mensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A2A6BE2C66DD3300105806 /* Mensaje.swift */; };
 		10BF80592C656773003EA09F /* Inicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BF80582C656773003EA09F /* Inicio.swift */; };
 		10D4E2A32C753BE1008F8765 /* Inicio.xml in Resources */ = {isa = PBXBuildFile; fileRef = 10D4E2A22C753BE1008F8765 /* Inicio.xml */; };
+		10F69F142C76A25D00CBDF86 /* PreguntaCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F69F132C76A25D00CBDF86 /* PreguntaCelda.swift */; };
+		10F69F162C76A86900CBDF86 /* Pregunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F69F152C76A86900CBDF86 /* Pregunta.swift */; };
+		10F69F182C76ACC400CBDF86 /* DetallesTexto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F69F172C76ACC400CBDF86 /* DetallesTexto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		10A2A6BE2C66DD3300105806 /* Mensaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensaje.swift; sourceTree = "<group>"; };
 		10BF80582C656773003EA09F /* Inicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inicio.swift; sourceTree = "<group>"; };
 		10D4E2A22C753BE1008F8765 /* Inicio.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Inicio.xml; sourceTree = "<group>"; };
+		10F69F132C76A25D00CBDF86 /* PreguntaCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreguntaCelda.swift; sourceTree = "<group>"; };
+		10F69F152C76A86900CBDF86 /* Pregunta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pregunta.swift; sourceTree = "<group>"; };
+		10F69F172C76ACC400CBDF86 /* DetallesTexto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesTexto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,9 @@
 				10A2A6BA2C66DA1700105806 /* ConexionConfirmacion.swift */,
 				10A2A6BC2C66DA2A00105806 /* Confirmacion.swift */,
 				1006EDF02C6C169500DCF99F /* Revision.swift */,
+				10F69F132C76A25D00CBDF86 /* PreguntaCelda.swift */,
+				10F69F152C76A86900CBDF86 /* Pregunta.swift */,
+				10F69F172C76ACC400CBDF86 /* DetallesTexto.swift */,
 			);
 			path = Controlers;
 			sourceTree = "<group>";
@@ -354,8 +363,11 @@
 				103B65FF2C4EFBDE0076822A /* LoginControl.swift in Sources */,
 				103B66052C4EFC550076822A /* PreguntasCOntroler.swift in Sources */,
 				104D380E2C406FD80011E85C /* AppDelegate.swift in Sources */,
+				10F69F182C76ACC400CBDF86 /* DetallesTexto.swift in Sources */,
 				103B66012C4EFBFD0076822A /* ConfirmacionControler.swift in Sources */,
+				10F69F142C76A25D00CBDF86 /* PreguntaCelda.swift in Sources */,
 				103B66072C4EFCD50076822A /* PreguntaControler.swift in Sources */,
+				10F69F162C76A86900CBDF86 /* Pregunta.swift in Sources */,
 				104D38102C406FD80011E85C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

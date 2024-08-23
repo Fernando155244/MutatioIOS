@@ -19,7 +19,7 @@ class ConfirmacionControler: UIViewController
     @IBOutlet weak var txtNivel:UILabel!
     var Revision: [Revision] = []
     var Tipo: Int = Int()
-    var Id : Int?
+    var Id : Int = 1
         override func viewDidLoad() {
         super.viewDidLoad()
         parseXML()
@@ -54,4 +54,5 @@ class ConfirmacionControler: UIViewController
         }
     }
 
+    
 }

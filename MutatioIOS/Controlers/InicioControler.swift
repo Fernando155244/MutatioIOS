@@ -11,6 +11,7 @@ import UIKit
 class InicioControler: UIViewController
 {
     @IBOutlet weak var IngresarBTN :UIButton!
+    @IBOutlet weak var RegresarBTN : UIButton!
     @IBOutlet weak var txtID: UILabel!
     @IBOutlet weak var txtNombre: UILabel!
     @IBOutlet weak var txtRegistrada: UILabel!
@@ -27,13 +28,17 @@ class InicioControler: UIViewController
 
         var inicioData: [Inicio] = [] // Opcional para manejar casos donde no se encuentra data
         var Tipo: Int? = Int()
-        var Id: Int? = Int()
+        var Id: Int = 1
         // ... (otros miembros)
 
         override func viewDidLoad() {
             super.viewDidLoad()
             parseXML()
         }
+    @IBAction func Cerrar(_ sender: Any)
+    {
+        dismiss(animated: true, completion: nil)
+    }
 
         func parseXML() {
             if let path = Bundle.main.url(forResource: "Inicio", withExtension: "xml"){
@@ -43,7 +48,7 @@ class InicioControler: UIViewController
                     parser.parse()
                     self.inicioData = Conexion().Iniciado
                     txtID.text = "Solicitud de Cambios Numero: \(delegate.Id)"
-                    txtNombre.text = "Del trabajador: \(delegate.Paterno) \(delegate.Materno) \(delegate.Nombre)"
+                    txtNombre.text = "Del trabajador: \(delegate.Paterno) \(delegate.Materno) \n \(delegate.Nombre)"
                 let Valor: Int = Registro(Solicitud_Real: delegate.Solicitud_Real, F_Registro: delegate.Solicitud_Real, Certificada_UR: delegate.Certificada_UR, F_Certificada_UR: delegate.F_Certificada_UR, Marcada: delegate.Marcada, Cancelada: delegate.Cancelada, Validada_DGP: delegate.Validada_DGP, Observaciones: delegate.Observaciones)
                     if (Tipo == 1)
                     {
@@ -119,14 +124,14 @@ class InicioControler: UIViewController
             {
                 if(Int(Solicitud_Real) == 1)
                 {
-                    txtRegistrada.text = "🔘La solicitud de cambio ha sido Verificada \(F_Registro)"
+                    txtRegistrada.text = "🔘La solicitud de cambio ha sido Verificada\n \(F_Registro)"
                 }else
                 {
                     txtRegistrada.isHidden = false
                 }
                 if(Int(Certificada_UR) == 1)
                 {
-                    txtCertificada.text = "🔘La solicitud de cambio ha sido Certificada \(F_Certificada_UR)"
+                    txtCertificada.text = "🔘La solicitud de cambio ha sido Certificada\n \(F_Certificada_UR)"
                     if(Int(Cancelada) == 1)
                     {
                         return 2
@@ -160,14 +165,14 @@ class InicioControler: UIViewController
             {
                 if(Int(Solicitud_Real) == 1)
                 {
-                    txtRegistrada.text = "🔘La solicitud de permuta ha sido Verificada \(F_Registro)"
+                    txtRegistrada.text = "🔘La solicitud de permuta ha sido Verificada\n \(F_Registro)"
                 }else
                 {
                     txtRegistrada.isHidden = false
                 }
                 if(Int(Certificada_UR) == 1)
                 {
-                    txtCertificada.text = "🔘La solicitud de permuta ha sido Certificada \(F_Certificada_UR)"
+                    txtCertificada.text = "🔘La solicitud de permuta ha sido Certificada \n\(F_Certificada_UR)"
                     if(Int(Cancelada) == 1)
                     {
                         return 2

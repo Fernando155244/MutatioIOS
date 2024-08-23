@@ -5,15 +5,16 @@ import SwiftUI
 class LoginControler: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var pickerData: [String] = ["Cambio", "Permuta"]
-    
+    var Id:Int?
     @IBOutlet weak var IngresarBTN: UIButton!
     @IBOutlet weak var RFC: UITextField!
     @IBOutlet weak var Folio: UITextField!
     @IBOutlet weak var Opcion: UIPickerView!
-    
+    // MARK: -VierDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        RFC.text = "DF3TELeCEOmFF"
+        Folio.text = "1"
         // Asignar delegados y data source para el UIPickerView
         Opcion.delegate = self
         Opcion.dataSource = self
@@ -25,15 +26,7 @@ class LoginControler: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         // Cargar los datos desde un archivo JSON si es necesario
         leerArchivoJson(filename: "WsDatos")
         
-        // Guardar datos en la memoria (UserDefaults)
-        guardarDatosMemoria(key: "ClaveUsuario", value: "FernandoOrozco")
-        guardarDatosMemoria(key: "password", value: "123")
-        guardarDatosMemoria(key: "Nombre", value: "El Fercho")
-        guardarDatosMemoria(key: "e-Mail", value: "155244@udlondres.com")
-        guardarDatosMemoria(key: "Genero", value: "M")
-        guardarDatosMemoria(key: "Edad", value: "26")
-        guardarDatosMemoria(key: "Telefono", value: "5548835143")
-        guardarDatosMemoria(key: "Ocupacion", value: "Estudiante")
+        
     }
     
     // MARK: - UIPickerViewDataSource
@@ -46,13 +39,11 @@ class LoginControler: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         return pickerData.count
     }
     
-    // MARK: - UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
     
-    // MARK: - Other Methods
     
     func leerArchivoJson(filename name: String) {
         do {
@@ -68,25 +59,22 @@ class LoginControler: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             print(error)
         }
     }
-    
+    // MARK: - Ingresar
     @IBAction func ingresar_click(_ sender: Any) {
         if validacampos() {
             let usuario = RFC.text
             let password = Folio.text
-            print(usuario as Any)
         }
-        ConfirmacionControler().Id = Int(Folio.text ?? "0")!
-        //printContent("Posicion \(Opcion.numberOfComponents)")
-        //InicioControler().Tipo = Opcion.numberOfComponents
+        
         self.view.endEditing(true)
         
     }
-    
+    // MARK: -Guardar Memoria
     func guardarDatosMemoria(key: String, value: Any) {
         UserDefaults.standard.set(value, forKey: key)
         UserDefaults.standard.synchronize()
     }
-    
+    // MARK: -Validar Campos
     func validacampos() -> Bool {
         guard let usuario = RFC.text, !usuario.isEmpty,
               let password = Folio.text, !password.isEmpty else {
@@ -98,7 +86,7 @@ class LoginControler: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         
         RFC.backgroundColor = .white
         Folio.backgroundColor = .white
-        
+        // MARK: -Pruebas Login
         if login(name: usuario, pass: password) {
             return true
         } else {
@@ -106,10 +94,9 @@ class LoginControler: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             return false
         }
     }
-    
     func login(name: String, pass: String) -> Bool {
-        let nombre = "Fer"
-        let password = "123"
+        let nombre = "DF3TELeCEOmFF"
+        let password = "1"
         
         return name == nombre && pass == password
     }
